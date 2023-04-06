@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
 })
 export class ServersComponent {
   serverName = '';
+  textVisible = false;
+  clicks = [];
 
   isServerName() { 
     return this.serverName ? this.serverName : false;
@@ -14,5 +16,10 @@ export class ServersComponent {
 
   resetServerName() {
     return this.serverName = '';
+  }
+
+  onShow() {
+    this.clicks.push(new Date().getTime());
+    return this.textVisible = !this.textVisible;
   }
 }

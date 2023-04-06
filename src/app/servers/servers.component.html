@@ -3,3 +3,22 @@
 <input id="server-name" type="text" class="form-control" [(ngModel)]="serverName">
 <p>Server name is {{ serverName }}</p>
 <button class="btn btn-primary" [disabled]="!isServerName()" (click)="resetServerName()">Очистить поле</button>
+
+<hr>
+
+<button class="btn btn-primary" (click)="onShow()">Display Details</button>
+<p *ngIf="textVisible">
+    Secret text. Tsss!
+</p>
+<p *ngFor="let click of clicks; let i = index"
+    [ngStyle]="{'background-color': (i >= 4) ? 'blue' : 'transparent'}"
+    [ngClass]="{'text-white' : i >= 4}"
+>
+    Timestamp is {{ click }}
+</p>
+
+<!-- Add A button which says 'Display Details'
+Add a paragraph with any content of your choice (e.g. 'Secret Password = tuna')
+Toggle the displaying of that paragraph with the button created in the first step
+Log all button clicks in an array and output that array below the secret paragraph (maybe log a timestamp or simply an incrementing number)
+Starting at the 5th log item, give all future log items a blue background (via ngStyle) and white color (ngClass) -->
