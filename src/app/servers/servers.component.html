@@ -1,0 +1,5 @@
+<h2>It's server component</h2>
+<label for="server-name">Input server name</label>
+<input id="server-name" type="text" class="form-control" [(ngModel)]="serverName">
+<p>Server name is {{ serverName }}</p>
+<button class="btn btn-primary" [disabled]="!isServerName()" (click)="resetServerName()">Очистить поле</button>
