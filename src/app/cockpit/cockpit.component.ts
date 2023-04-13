@@ -8,7 +8,7 @@ import { Component, ElementRef, EventEmitter, Output, ViewChild } from '@angular
 export class CockpitComponent {
   @Output() serverCreated = new EventEmitter<{serverName: string, serverContent: string}>();
   @Output('bpCreated') blueprintCreated = new EventEmitter<{serverName: string, serverContent: string}>();
-  @ViewChild('serverContentInput', { static: true}) serverContentInput: ElementRef  
+  @ViewChild('serverContentInput', { static: true}) serverContentInput: ElementRef;  
 
   onAddServer(serverNameInput: HTMLInputElement) {
     this.serverCreated.emit({
