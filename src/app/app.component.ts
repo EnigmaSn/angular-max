@@ -12,4 +12,5 @@ export class AppComponent {
   onNavigate(activatedLink: string) {
     this.activeLink = activatedLink;
   }
+  
 }
