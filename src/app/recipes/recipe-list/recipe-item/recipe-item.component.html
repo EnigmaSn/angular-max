@@ -1,1 +1,11 @@
-<p>recipe-item works!</p>
+<a href="#" 
+    class="list-group-item list-group-item-action d-flex justify-content-between"
+>
+    <div class="pull-start">
+        <h4 class="list-group-item-heading">{{ recipe.name }}</h4>
+        <p class="list-group-item-text">{{ recipe.description }}</p>
+    </div>
+    <div class="pull-end">
+        <img [src]="recipe.imgUrl" alt="{{ recipe.name }}" class="img-fluid img-thumbnail" style="max-height: 50px;">
+    </div>
+</a>
