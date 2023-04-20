@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 
 @Component({
@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.less']
 })
 export class AppComponent {
+  activeLink: string = 'recipe';
+
+  onNavigate(activatedLink: string) {
+    this.activeLink = activatedLink;
+  }
+  
 }
