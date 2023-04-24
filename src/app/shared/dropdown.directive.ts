@@ -12,16 +12,6 @@ export class DropdownDirective {
     private elRef: ElementRef
     ) { }
 
-  // @HostListener('click') toggleOpen() {
-  //   this.isOpen = !this.isOpen;
-  //   const menu = this.elRef.nativeElement.children[1];
-
-  //   if (this.isOpen) {
-  //     this.renderer.addClass(menu, 'show');
-  //   } else {
-  //     this.renderer.removeClass(menu, 'show');
-  //   }
-  // }
   @HostListener('document:click', ['$event']) toggleOpen(event: Event) {
     const menu = this.elRef.nativeElement.children[1];
 
