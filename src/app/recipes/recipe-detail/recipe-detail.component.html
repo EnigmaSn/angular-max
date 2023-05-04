@@ -18,7 +18,10 @@
                 Manage recipe <span class="caret"></span>
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownBtn">
-                <a href="#" class="dropdown-item">To shopping list</a>
+                <a 
+                    class="dropdown-item" 
+                    style="cursor: pointer"
+                    (click)="onAddToShoppingList(recipe.ingredients)">To shopping list</a>
                 <a href="#" class="dropdown-item">Edit recipe</a>
                 <a href="#" class="dropdown-item">Delete recipe</a>
             </ul>
