@@ -6,7 +6,6 @@ import { ActivatedRoute, Router } from '@angular/router';
   selector: 'app-servers',
   templateUrl: './servers.component.html',
   styleUrls: ['./servers.component.less'],
-  providers: [ServersService]
 })
 export class ServersComponent implements OnInit {
   public servers: {id: number, name: string, status: string}[] = [];

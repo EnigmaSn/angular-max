@@ -8,7 +8,15 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent {
   constructor(private router: Router) {};
-  onLoadServers() {
-    this.router.navigate(['servers']);
+  onLoadServers(id: number) {
+    this.router.navigate(
+      ['servers', id, 'edit'], 
+      {
+        queryParams: {
+          param1: 'value1'
+        }, 
+        fragment: 'loading'
+      }
+    );
   };
 }
